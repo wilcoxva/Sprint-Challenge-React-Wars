@@ -1,8 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 import StarWars from './components/StarWars';
+import styled from "styled-components";
 import './App.css';
 import { filterLimit } from 'async';
+
+const Div = styled.div`
+  display: flex;
+`;
 
 const App = (props) => {
   // Try to think through what state you'll need for this app before starting. Then build out
@@ -26,7 +31,8 @@ const App = (props) => {
   return (
     <div className="App">
       <h1 className="Header">React Wars</h1>
-      {people.map(person => {
+      <Div>
+        {people.map(person => {
         return (
           <StarWars 
             key={person.url}
@@ -37,6 +43,8 @@ const App = (props) => {
           />
         )
       })}
+      </Div>
+      
     </div>
   );
 }
