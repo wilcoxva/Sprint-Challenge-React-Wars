@@ -7,6 +7,7 @@ import { filterLimit } from 'async';
 
 const Div = styled.div`
   display: flex;
+  flex-wrap: wrap;
 `;
 
 const App = (props) => {
